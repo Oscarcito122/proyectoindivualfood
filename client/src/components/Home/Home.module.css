@@ -1,0 +1,18 @@
+.div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.filter {
+border: none;
+font-size: 0.8rem;
+padding: 5px;
+margin: 5px;
+cursor: pointer;
+background-color: #6e0f00;
+color: white;
+}
+
+.active {
+    color: #ffffff;
+}

@@ -1,4 +1,11 @@
 body {
+  background-image: url("./images/Api\ \(1\).jpg");
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    background-position: top center;
+    background-size: cover;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

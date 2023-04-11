@@ -1,0 +1,36 @@
+.enc {
+    background-image: url('../../images/fondodetail.jpg');
+    background-size: contain;
+    background-repeat: repeat-y;
+    display: inline-block;
+    width: 600px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: large;
+}
+
+.summary {
+    max-width: 600px;
+    margin: auto;
+}
+
+.steps {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.imgdetail {
+    background-color:#6e0f00;
+    padding:10px 10px 50px 10px;
+    border:1px solid #710f00;
+    box-shadow:10px 10px 30px rgba(0, 0, 0, 0.4);
+    transform:rotate(-10deg);
+    max-width: 400px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}

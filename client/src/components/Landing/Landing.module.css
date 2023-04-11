@@ -1,0 +1,24 @@
+
+.button{
+    color: #ffffff;
+    background-color: #6e0f00;
+    font-size: 1.5rem;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    z-index: 2;
+    cursor: pointer;
+}
+.button:hover {
+    transition: 2s;
+      width: 110px;
+      height: 50px;
+      filter: drop-shadow(0 0 5px  #e5eaec );
+}
+
+.title{
+    color: white;
+    font-size: 5rem;
+    position: relative;
+    z-index: 2;
+}
