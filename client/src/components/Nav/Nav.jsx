@@ -16,6 +16,7 @@ export default function Nav(){
     return (
         <div className={styled.navBar}>
             <p className={styled.pifood}>PI - FOOD</p>
+            <Link to= "/">    <button  className={styled.btn} >Logout</button></Link>
             <Link to="/home"> <button  className={styled.btn} onClick={handleState}>Home</button> </Link>
             <Link to="/form"> <button className={styled.btn}>Create Recipe</button> </Link>
             <SearchBar />

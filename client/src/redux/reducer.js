@@ -26,11 +26,10 @@ const rootReducer = (state = initialState, action) => {
             return {...state, foods: home, diet: auxDiets, foodsCopy: home, currentPage: 0}
 
         case GET_FOOD_ID:
-             //console.log("reducerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr", action.payload)
             return {...state, foodDetail: action.payload}
 
         case PUT_FOOD_BY_NAME:
-            console.log("respuesta de la api -------", action.payload)
+            
             return {...state, foods: action.payload, currentPage: 0}
 
         case DELETE_STATE:
@@ -49,10 +48,10 @@ const rootReducer = (state = initialState, action) => {
 
         case ORDER_TITLE:
             return {
-                ...state, foods: (action.payload === 'Ascendente')
+                ...state, foods: (action.payload === 'A-Z')
                     ? [...state.foods.sort((a, b) => a.title.localeCompare(b.title))]
                     : [...state.foods.sort((a, b) => b.title.localeCompare(a.title))],
-                foodsCopy: (action.payload === 'Ascendente')
+                foodsCopy: (action.payload === 'A-Z')
                     ? [...state.foodsCopy.sort((a, b) => a.title.localeCompare(b.title))]
                     : [...state.foodsCopy.sort((a, b) => b.title.localeCompare(a.title))],
                 currentPage: 0

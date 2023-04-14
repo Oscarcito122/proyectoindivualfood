@@ -83,4 +83,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
+    text-transform: lowercase;
 }
+
+

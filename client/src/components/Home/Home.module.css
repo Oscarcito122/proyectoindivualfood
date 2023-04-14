@@ -8,6 +8,7 @@ border: none;
 font-size: 0.8rem;
 padding: 5px;
 margin: 5px;
+border-radius: 5px;
 cursor: pointer;
 background-color: #6e0f00;
 color: white;

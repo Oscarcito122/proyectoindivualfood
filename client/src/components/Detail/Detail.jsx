@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { getFoodId } from "../../redux/actions";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Detail.module.css"
-
 
 
 
@@ -24,7 +24,7 @@ export default function Detail(props) {
             <p>DISH TYPES: {dishTypes}</p>
             <p className={styles.summary}>SUMMARY: {summary}</p>
             <p className={styles.steps}>STEPS: {steps}</p>
-            <h2>HEALTHSCORE: {healthScore}</h2>
-           
+            <h2>HEALTH SCORE: {healthScore}</h2>
+            <Link to="/home"><button className={styles.btn1}>Back</button></Link>
         </div>)
 }

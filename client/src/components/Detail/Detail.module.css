@@ -14,6 +14,24 @@
     font-size: large;
 }
 
+.btn1 {
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    background-color: #6e0f00;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.btn1:hover {
+    background-color: rgb(255, 255, 255);
+    color: #6e0f00;
+    height: 30px;
+    transition: 0.2s;
+}
+
 .summary {
     max-width: 600px;
     margin: auto;

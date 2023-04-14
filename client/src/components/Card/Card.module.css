@@ -2,8 +2,8 @@ a:link, a:visited, a:active {
     text-decoration:none;
 }
 .hscore{
-    background-color: #b33723;
-    width: 200px;
+    background-color: #6e0f00;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-content: center;

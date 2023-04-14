@@ -26,7 +26,7 @@ export default function SearchBar() {
     }
     return (
         <div>
-            <input type='search' placeholder="Search recipe" value={recipeName} onChange={handleInput}/>
+            <input type='search' placeholder="Search recipe..." value={recipeName} onChange={handleInput}/>
             <Link to="/home">
                 <button type='submit' className={styled.btn} onClick={handleClick}>Search</button>
             </Link>

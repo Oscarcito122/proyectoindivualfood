@@ -3,10 +3,11 @@ import styled from "./Landing.module.css"
 
 export default function Landing() {
     return (<>
-        <Link to="/home">
             <h1 className={styled.title}>PI - FOOD</h1>
+          <p className={styled.info}>Individual project created for ¡Soy Henry!</p>
+        <Link to="/home">
             <button className={styled.button}>Welcome</button>
         </Link>
-        <div className={styled.capa} />
+        <p className={styled.credits}>By: Tiago Bergmann</p>
     </>)
 }

@@ -37,11 +37,11 @@ export default function Form() {
             errors = {...errors, title: ""}
         } else {
             // console.log("pasando por validate              else")
-            errors = {...errors, title: "Hay errores en el titulo."}
+            errors = {...errors, title: "There are errors in the title."}
         }
 
         if (form.summary.length > 30) {
-            errors = {...errors, summary: "Hay errores en el resumen"}
+            errors = {...errors, summary: "There are errors in the summary"}
         } else {
             errors = {...errors, summary: ""}
         }
@@ -50,12 +50,12 @@ export default function Form() {
         if (floatRegex.test(form.healthScore)) {
             errors = {...errors, healthScore: ""}
         } else {
-            errors = {...errors, healthScore: "Valor ingresado invalido."}
+            errors = {...errors, healthScore: "Invalid value entered."}
         }
         if (form.step.length) {
             errors = {...errors, step: ""}
         } else {
-            errors = {...errors, step: "Hay errores en los pasos introducidos."}
+            errors = {...errors, step: "There are errors in the steps entered."}
         }
 
         return errors
@@ -82,9 +82,14 @@ export default function Form() {
 
     const submitHandler = async (event) => {
         event.preventDefault()
+        try{
         const result = await axios.post("http://localhost:3001/api/recipe", form)
         dispatch(createRecipe(result.data))
+        alert("Your recipe has been created successfully!✅");
         history.push('/home')
+    } catch (error) {
+        alert("La receta no se pudo crear por un error en los datos")
+    }
     }
 
     const handleCheck = (event) => {
@@ -154,6 +159,7 @@ export default function Form() {
             <div className={styled.txt}><label>Diets Types: </label></div>
                 {
                     dietTypes.map((diet, index) => {
+                        
                         return (
                             <div className={styled.list} key={index}>
                                 <label>{diet}</label>

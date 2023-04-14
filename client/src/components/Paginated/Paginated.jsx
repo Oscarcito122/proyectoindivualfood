@@ -6,7 +6,6 @@ import Loader from "../Loading/Loading";
 import styled from "./Paginated.module.css"
 const {useSelector} = require("react-redux");
 
-
 export default function Paginated() {
     const dispatch = useDispatch()
     const currentPage = useSelector(state => state.currentPage)
@@ -14,12 +13,13 @@ export default function Paginated() {
     const foods = useSelector(state => state.foods)
     const page = []
 
-    useEffect(async () => {
-    if (!foods.length)  {
-        await dispatch (getHomeCards())
-        setTimeout(()=>{dispatch(Loading())}, 0 ) }
+// eslint-disable-next-line 
+    useEffect( async () => {
+    if (!foods.length){
+     await dispatch (getHomeCards()) 
+    setTimeout(()=>{dispatch(Loading())}, 0 ) }
         // eslint-disable-next-line
-    }, [currentPage, foods, loader])
+    },[currentPage, foods, loader])
 
     for (let i = 0; i < foods.length; i = i + 9) {
         page.push(foods.slice(i, i + 9 || foods.length))
@@ -57,5 +57,4 @@ export default function Paginated() {
             </div>
         )
     }
-
 }

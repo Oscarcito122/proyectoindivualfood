@@ -1,6 +1,6 @@
 import Card from "../Card/Card";
 import styled from "styled-components";
-import styles from "./Cards.module.css";
+
 const ConDiv = styled.div`
   display: flex;
   flex-direction: row;

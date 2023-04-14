@@ -7,15 +7,13 @@ import styled from "./Home.module.css"
 export default function Home() {
     const dispatch = useDispatch()
     const diets = useSelector(state => state.diet)
-
     const handleOrder = (event) => {
         dispatch(orderRecipes(event.target.value))
     }
-
+    
     const handleOrderTitle = (event) => {
         dispatch(OrderTitle(event.target.value))
     }
-
     const handleFilter = (event) => {
         dispatch(dishTypes(event.target.value))
     }
@@ -25,17 +23,17 @@ export default function Home() {
         <div className={styled.div}>
         <div>
             <select className={styled.filter} onChange={handleOrderTitle}>
-                <option  disabled selected>Title</option>
-                <option  value="Ascendente">Ascendente</option>
-                <option  value="Descendente">Descendente</option>
+                <option  disabled selected>Order by Title</option>
+                <option  value="A-Z">Title (A-Z)</option>
+                <option  value="Z-A">Title (Z-A)</option>
             </select>
             <select className={styled.filter} onChange={handleOrder}>
-                <option disabled selected>Health Score</option>
+                <option disabled selected>Order by Health</option>
                 <option value="Ascendente">Ascendente</option>
                 <option value="Descendente">Descendente</option>
             </select>
             <select className={styled.filter} onChange={handleFilter}>
-                <option disabled selected>Diets</option>
+                <option disabled selected>Order by Diets</option>
                 {
                     diets.map((d, index) => {
                         return <option value={d} key={index}>{d}</option>

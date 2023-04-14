@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: rgba(23, 23, 23, 0.517);
+    background-color: #040404ba;
     border: solid rgba(172, 190, 224, 0);
 }
 .btn {
