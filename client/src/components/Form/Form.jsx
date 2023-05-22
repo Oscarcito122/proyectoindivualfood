@@ -88,7 +88,7 @@ export default function Form() {
         alert("Your recipe has been created successfully!✅");
         history.push('/home')
     } catch (error) {
-        alert("La receta no se pudo crear por un error en los datos")
+        alert("The recipe could not be created due to an error in the information")
     }
     }
 
